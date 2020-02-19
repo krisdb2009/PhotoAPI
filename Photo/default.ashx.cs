@@ -2,7 +2,7 @@
 using System.DirectoryServices;
 using System.Text.RegularExpressions;
 
-namespace Photo
+namespace PhotoAPI
 {
     public class _default : IHttpHandler
     {
