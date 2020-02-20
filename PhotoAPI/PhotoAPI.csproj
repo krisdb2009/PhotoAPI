@@ -56,6 +56,7 @@
   <ItemGroup>
     <Content Include="PhotoAPI.ashx" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\PhotoAPI.pubxml" />
     <None Include="Properties\PublishProfiles\Publish.pubxml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
