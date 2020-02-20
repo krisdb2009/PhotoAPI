@@ -1,0 +1,1 @@
+﻿<%@ WebHandler Language="C#" CodeBehind="PhotoAPI.ashx.cs" Class="PhotoAPI._default" %>
