@@ -12,10 +12,9 @@ namespace PhotoAPI
         }
         public void ProcessRequest(HttpContext http)
         {
-            string url = http.Request.RawUrl;
-            if (url.Length >= 3 && url.StartsWith("/?"))
+            if (http.Request.QueryString.Count == 1)
             {
-                string userName = url.Replace("/?", "");
+                string userName = http.Request.QueryString[0];
                 if (userName != null && Regex.IsMatch(userName, @"[\w\d]*[^/\\[\]:;|=,+*?<>]*"))
                 {
                     DirectorySearcher ds = new DirectorySearcher("(&(objectClass=user)(sAMAccountName=" + userName + "))", new string[] { "thumbnailPhoto" });
