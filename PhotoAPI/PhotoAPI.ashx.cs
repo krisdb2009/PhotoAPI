@@ -19,7 +19,7 @@ namespace PhotoAPI
                 {
                     DirectorySearcher ds = new DirectorySearcher("(&(objectClass=user)(sAMAccountName=" + userName + "))", new string[] { "thumbnailPhoto" });
                     SearchResult result = ds.FindOne();
-                    if (result != null)
+                    if (result != null && result.Properties.Contains("thumnailPhoto"))
                     {
                         http.Response.ContentType = "image/jpeg";
                         http.Response.BinaryWrite((byte[])result.Properties["thumbnailPhoto"][0]);
